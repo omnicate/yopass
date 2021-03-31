@@ -55,10 +55,10 @@ func (y *Server) createSecret(w http.ResponseWriter, request *http.Request) {
 		return
 	}
 
-	if len(s.Message) > y.maxLength {
-		http.Error(w, `{"message": "The encrypted message is too long"}`, http.StatusBadRequest)
-		return
-	}
+	// if len(s.Message) > y.maxLength {
+	// 	http.Error(w, `{"message": "The encrypted message is too long"}`, http.StatusBadRequest)
+	// 	return
+	// }
 
 	// Generate new UUID
 	uuidVal, err := uuid.NewV4()
